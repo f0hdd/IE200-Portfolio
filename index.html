@@ -1,84 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fahad Al Zaid | IE200 E-Portfolio</title>
+    <title>Fahad Mohammed Al Zaid | IE200 E-Portfolio</title>
     <style>
-        :root { --main-blue: #0f172a; --accent-teal: #0d9488; --bg-gray: #f8fafc; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background-color: var(--bg-gray); color: #334155; }
-        header { background: linear-gradient(135deg, var(--main-blue), #1e293b); color: white; padding: 40px 20px; text-align: center; }
-        .nav-bar { background: white; padding: 15px; display: flex; justify-content: center; gap: 10px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); position: sticky; top: 0; }
-        button { padding: 12px 20px; cursor: pointer; border: none; border-radius: 6px; font-weight: 600; background: #e2e8f0; }
-        button.active { background: var(--accent-teal); color: white; }
-        .content { max-width: 900px; margin: 30px auto; padding: 20px; }
-        .tab-pane { display: none; background: white; padding: 40px; border-radius: 12px; }
-        .tab-pane.active { display: block; }
-        .link-btn { display: block; background: var(--accent-teal); color: white; padding: 12px; text-align: center; text-decoration: none; border-radius: 6px; margin: 10px 0; font-weight: bold; }
-        .eval-box { background: #f1f5f9; padding: 20px; border-left: 5px solid var(--accent-teal); margin-bottom: 30px; }
-        h3 { color: var(--main-blue); margin-top: 30px; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; min-height: 100vh; background: #f0f2f5; }
+        .sidebar { width: 280px; background: #1a1a1a; color: white; padding: 30px; display: flex; flex-direction: column; position: fixed; height: 100%; }
+        .sidebar h2 { font-size: 1.4em; border-bottom: 2px solid #333; padding-bottom: 10px; }
+        .nav-link { color: #bbb; text-decoration: none; padding: 15px 0; border-bottom: 1px solid #333; font-weight: 500; }
+        .nav-link:hover { color: #00d4ff; }
+        .main { margin-left: 340px; padding: 60px; width: calc(100% - 400px); }
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb'); background-size: cover; color: white; padding: 100px 40px; text-align: center; border-radius: 12px; margin-bottom: 40px; }
+        .section { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 40px; }
+        .eval-box { background: #f8f9fa; padding: 25px; border-left: 6px solid #00d4ff; margin-top: 20px; font-style: italic; color: #444; line-height: 1.8; }
+        .btn { display: inline-block; background: #00d4ff; color: #000; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 15px; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Fahad Mohammed Al Zaid</h1>
-    <p>IE200 | King Abdulaziz University | 2026</p>
-</header>
-
-<div class="nav-bar">
-    <button class="tab-btn active" onclick="showTab('home')">Home</button>
-    <button class="tab-btn" onclick="showTab('diaries')">Weekly Journals</button>
-    <button class="tab-btn" onclick="showTab('writing')">Writing & Speaking</button>
-    <button class="tab-btn" onclick="showTab('research')">Research Details</button>
+<div class="sidebar">
+    <h2>Fahad Al Zaid</h2>
+    <a href="#home" class="nav-link">Home Page</a>
+    <a href="#research" class="nav-link">Research Journey</a>
+    <a href="#speaking" class="nav-link">Speaking & Writing</a>
+    <a href="#diaries" class="nav-link">Weekly Diaries</a>
 </div>
 
-<div class="content">
-    <div id="home" class="tab-pane active">
-        <h2>Welcome to My E-Portfolio</h2>
-        <p>This portfolio documents my academic journey in IE200, showcasing my growth in research, technical communication, and analytical thinking.</p>
+<div class="main">
+    <div id="home" class="hero">
+        <h1>My IE200 Portfolio</h1>
+        <p>King Abdulaziz University | Term 2, 2026</p>
     </div>
 
-    <div id="diaries" class="tab-pane">
-        <h2>Weekly Journals</h2>
-        <p>Consistent reflection is vital for academic growth. These journals document my weekly progress and challenges.</p>
-        <a href="#" class="link-btn">🔗 Access Weekly Journals</a>
-        <div class="eval-box"><strong>Reflection:</strong> This journal serves as a record of my learning process, highlighting how I managed academic challenges and refined my study habits throughout the semester.</div>
+    <div id="research" class="section">
+        <h2>Research Journey</h2>
+        <p><strong>Topic:</strong> Overconfidence from Superficial Knowledge: A Study of Cognitive and Behavioral Effect.</p>
+        <a href="https://drive.google.com/file/d/1pMQdTIx14V4UwPmjcGRZKjSD0egW_fZf/view" class="btn">View Final Report</a>
+        <h3>Methodology & Findings</h3>
+        <div class="eval-box">
+            The research utilized a 15-item survey administered to 51 participants. The methodology focused on understanding how shallow information consumption leads to cognitive biases. Findings indicate that active learning strategies are vital to mitigate these effects. This report represents the synthesis of data analysis and academic writing skills I developed throughout IE200.
+        </div>
     </div>
 
-    <div id="writing" class="tab-pane">
-        <h2>Writing & Speaking</h2>
-        <p>This section showcases my development in professional communication and presentation skills.</p>
-        <h3>Presentations</h3>
-        <a href="https://docs.google.com/presentation/d/12pxoXJp8WPZCgNCm5Q6DhvOD-BwsXn5E/edit" class="link-btn">Presentation 1</a>
-        <a href="https://docs.google.com/presentation/d/1VEwsAqcn69wIeDZ3DdMC1yfIp9D39U8q/edit" class="link-btn">Presentation 2</a>
-        <div class="eval-box"><strong>Evaluation:</strong> These presentations emphasize clear, symbolic design over complex imagery, ensuring that engineering concepts are communicated effectively and professionally.</div>
-        
-        <h3>Evaluator Feedback</h3>
-        <a href="https://drive.google.com/file/d/1OA_Mbr5Dx2FpPSvQckJ8Q723Q-8TanGO/view" class="link-btn">Feedback 1</a>
-        <a href="https://drive.google.com/file/d/1xtbO8CjDVZsPIlalcK8d5pful1aJ-PTg/view" class="link-btn">Feedback 2</a>
-        <div class="eval-box"><strong>Evaluation:</strong> Instructor feedback was fundamental in refining my writing style. Each critique allowed me to bridge the gap between initial drafts and final academic standards.</div>
+    <div id="speaking" class="section">
+        <h2>Speaking & Writing Tasks</h2>
+        <h3>Presentation Exhibits</h3>
+        <a href="https://docs.google.com/presentation/d/12pxoXJp8WPZCgNCm5Q6DhvOD-BwsXn5E/edit" class="btn">Presentation 1</a>
+        <a href="https://docs.google.com/presentation/d/1VEwsAqcn69wIeDZ3DdMC1yfIp9D39U8q/edit" class="btn">Presentation 2</a>
+        <div class="eval-box">
+            These presentations demonstrate my ability to convey complex engineering concepts using professional, symbolic designs that prioritize clarity and information retention over visual distraction.
+        </div>
+        <h3>Instructor Feedback</h3>
+        <a href="https://drive.google.com/file/d/1OA_Mbr5Dx2FpPSvQckJ8Q723Q-8TanGO/view" class="btn">Feedback 1</a>
+        <a href="https://drive.google.com/file/d/1xtbO8CjDVZsPIlalcK8d5pful1aJ-PTg/view" class="btn">Feedback 2</a>
+        <div class="eval-box">
+            These records of instructor feedback highlight the iterative process of my academic growth, specifically in refining my technical delivery and structuring persuasive arguments.
+        </div>
     </div>
 
-    <div id="research" class="tab-pane">
-        <h2>Research Details</h2>
-        <p><strong>Title:</strong> Overconfidence from Superficial Knowledge: A Study of Cognitive and Behavioral Effect.</p>
-        <a href="https://drive.google.com/file/d/1pMQdTIx14V4UwPmjcGRZKjSD0egW_fZf/view" class="link-btn">View Final Research Report</a>
-        
-        <h3>Methodology</h3>
-        <div class="eval-box"><strong>Process:</strong> I conducted a 15-question survey with 51 participants to analyze how superficial content influences self-confidence. This taught me how to structure valid, unbiased survey questions and manage data effectively.</div>
-        
-        <h3>Findings</h3>
-        <div class="eval-box"><strong>Conclusion:</strong> My study indicates that active learning strategies are essential to counteracting the effects of superficial knowledge. This research demonstrates my capability to synthesize complex information into an academic report.</div>
+    <div id="diaries" class="section">
+        <h2>Weekly Diaries</h2>
+        <p>This section documents my reflective practice and weekly challenges faced during the course.</p>
+        <a href="#" class="btn">View Weekly Documentation</a>
+        <div class="eval-box">
+            Consistent documentation in these journals allowed me to track my progress, identify bottlenecks in my research workflow, and continuously improve my performance based on real-time challenges.
+        </div>
     </div>
 </div>
 
-<script>
-    function showTab(id) {
-        document.querySelectorAll('.tab-pane').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
-        event.currentTarget.classList.add('active');
-    }
-</script>
 </body>
 </html>
