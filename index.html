@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fahad Mohammed Al Zaid | IE200 E-Portfolio</title>
+    <title>Fahad Mohammed Al Zaid | IE200 Portfolio</title>
     <style>
+        * { box-sizing: border-box; }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; min-height: 100vh; background: #f0f2f5; }
-        .sidebar { width: 280px; background: #1a1a1a; color: white; padding: 30px; display: flex; flex-direction: column; position: fixed; height: 100%; }
-        .sidebar h2 { font-size: 1.4em; border-bottom: 2px solid #333; padding-bottom: 10px; }
-        .nav-link { color: #bbb; text-decoration: none; padding: 15px 0; border-bottom: 1px solid #333; font-weight: 500; }
-        .nav-link:hover { color: #00d4ff; }
-        .main { margin-left: 340px; padding: 60px; width: calc(100% - 400px); }
-        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb'); background-size: cover; color: white; padding: 100px 40px; text-align: center; border-radius: 12px; margin-bottom: 40px; }
+        .sidebar { width: 280px; background: #1a1a1a; color: white; padding: 40px 30px; position: fixed; height: 100%; }
+        .sidebar h2 { font-size: 1.5em; border-bottom: 2px solid #333; padding-bottom: 15px; margin-bottom: 30px; }
+        .nav-link { color: #bbb; text-decoration: none; display: block; padding: 15px 0; border-bottom: 1px solid #333; font-weight: 500; transition: 0.3s; }
+        .nav-link:hover { color: #00d4ff; padding-left: 10px; }
+        .main { margin-left: 280px; padding: 60px; width: calc(100% - 280px); }
+        .hero { background: #1a1a1a; color: white; padding: 80px; text-align: center; border-radius: 12px; margin-bottom: 40px; }
         .section { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 40px; }
         .eval-box { background: #f8f9fa; padding: 25px; border-left: 6px solid #00d4ff; margin-top: 20px; font-style: italic; color: #444; line-height: 1.8; }
-        .btn { display: inline-block; background: #00d4ff; color: #000; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 15px; }
+        .btn { display: inline-block; background: #00d4ff; color: #000; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 15px; margin-right: 10px; transition: 0.3s; }
+        .btn:hover { background: #0099bb; }
+        h3 { color: #1a1a1a; margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -35,10 +38,10 @@
     <div id="research" class="section">
         <h2>Research Journey</h2>
         <p><strong>Topic:</strong> Overconfidence from Superficial Knowledge: A Study of Cognitive and Behavioral Effect.</p>
-        <a href="https://drive.google.com/file/d/1pMQdTIx14V4UwPmjcGRZKjSD0egW_fZf/view" class="btn">View Final Report</a>
+        <a href="https://docs.google.com/document/d/1OA_Mbr5Dx2FpPSvQckJ8Q723Q-8TanGO/edit" class="btn">View Full Research Report</a>
         <h3>Methodology & Findings</h3>
         <div class="eval-box">
-            The research utilized a 15-item survey administered to 51 participants. The methodology focused on understanding how shallow information consumption leads to cognitive biases. Findings indicate that active learning strategies are vital to mitigate these effects. This report represents the synthesis of data analysis and academic writing skills I developed throughout IE200.
+            The research utilized a 15-item survey administered to 51 participants. Findings indicate that active learning strategies are vital to mitigate the cognitive biases associated with superficial knowledge. This report represents the synthesis of data analysis and academic writing skills I developed throughout IE200.
         </div>
     </div>
 
@@ -47,23 +50,22 @@
         <h3>Presentation Exhibits</h3>
         <a href="https://docs.google.com/presentation/d/12pxoXJp8WPZCgNCm5Q6DhvOD-BwsXn5E/edit" class="btn">Presentation 1</a>
         <a href="https://docs.google.com/presentation/d/1VEwsAqcn69wIeDZ3DdMC1yfIp9D39U8q/edit" class="btn">Presentation 2</a>
-        <div class="eval-box">
-            These presentations demonstrate my ability to convey complex engineering concepts using professional, symbolic designs that prioritize clarity and information retention over visual distraction.
-        </div>
+        
         <h3>Instructor Feedback</h3>
         <a href="https://drive.google.com/file/d/1OA_Mbr5Dx2FpPSvQckJ8Q723Q-8TanGO/view" class="btn">Feedback 1</a>
         <a href="https://drive.google.com/file/d/1xtbO8CjDVZsPIlalcK8d5pful1aJ-PTg/view" class="btn">Feedback 2</a>
+        
         <div class="eval-box">
-            These records of instructor feedback highlight the iterative process of my academic growth, specifically in refining my technical delivery and structuring persuasive arguments.
+            The instructor feedback above documents the iterative improvement of my presentation skills. These evaluations were critical in refining my delivery and symbolic design approach, ensuring academic professionalism.
         </div>
     </div>
 
     <div id="diaries" class="section">
         <h2>Weekly Diaries</h2>
-        <p>This section documents my reflective practice and weekly challenges faced during the course.</p>
+        <p>Reflective documentation of the semester progress.</p>
         <a href="#" class="btn">View Weekly Documentation</a>
         <div class="eval-box">
-            Consistent documentation in these journals allowed me to track my progress, identify bottlenecks in my research workflow, and continuously improve my performance based on real-time challenges.
+            These weekly journals provide a transparent view of my academic challenges and the problem-solving strategies I implemented throughout the IE200 semester.
         </div>
     </div>
 </div>
