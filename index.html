@@ -1,257 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fahad's IE200 E-Portfolio</title>
+    <title>Fahad Al Zaid | IE200 Professional E-Portfolio</title>
     <style>
-        :root {
-            --primary-color: #1a365d;
-            --secondary-color: #2b6cb0;
-            --accent-color: #38b2ac;
-            --bg-color: #f7fafc;
-            --text-color: #2d3748;
-        }
-        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
-        header { background-color: var(--primary-color); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--accent-color); }
-        header h1 { margin: 0; font-size: 2.8em; }
-        .header-details { background: rgba(255,255,255,0.1); display: inline-flex; padding: 10px 20px; border-radius: 50px; gap: 20px; margin-top: 15px; }
-        nav { display: flex; justify-content: center; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; }
-        nav button { background: none; border: none; padding: 18px 30px; color: var(--primary-color); font-size: 1.1em; font-weight: bold; cursor: pointer; border-bottom: 3px solid transparent; }
-        nav button.active { color: var(--secondary-color); border-bottom: 3px solid var(--accent-color); background-color: #ebf8ff; }
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        .tab-content { display: none; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .tab-content.active { display: block; }
-        h2 { color: var(--primary-color); border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-        .exhibit { margin-top: 30px; padding: 25px; background-color: #f8fafc; border-left: 5px solid var(--secondary-color); border-radius: 0 8px 8px 0; }
-        .placeholder-box { background-color: #fff3cd; border: 2px dashed #ffeeba; padding: 30px; text-align: center; color: #856404; font-weight: bold; font-size: 1.1em; border-radius: 8px; margin: 15px 0; }
-        .evaluation { font-style: italic; color: #4a5568; background: #edf2f7; padding: 15px; border-radius: 6px; margin-top: 15px; border: 1px solid #e2e8f0; }
+        :root { --main-blue: #0f172a; --accent-teal: #0d9488; --bg-gray: #f8fafc; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background-color: var(--bg-gray); color: #334155; }
+        header { background: linear-gradient(135deg, var(--main-blue), #1e293b); color: white; padding: 50px 20px; text-align: center; }
+        .nav-bar { background: white; padding: 15px; display: flex; justify-content: center; gap: 10px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 10; }
+        button { padding: 12px 25px; cursor: pointer; border: none; border-radius: 6px; font-weight: 600; background: #e2e8f0; transition: 0.3s; }
+        button.active { background: var(--accent-teal); color: white; }
+        .content { max-width: 900px; margin: 30px auto; padding: 20px; }
+        .tab-pane { display: none; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .tab-pane.active { display: block; }
+        .guide-box { background: #fffbeb; border: 2px dashed #d97706; padding: 20px; text-align: center; color: #92400e; border-radius: 8px; margin: 20px 0; font-weight: bold; }
+        .eval-box { background: #f1f5f9; padding: 15px; border-left: 4px solid var(--accent-teal); margin-top: 10px; font-style: italic; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Fahad Mohammed Al Zaid</h1>
-        <p>King Abdulaziz University | IE200 E-Portfolio</p>
-        <div class="header-details">
-            <span><strong>ID:</strong> 2537996</span>
-            <span><strong>Group:</strong> 10</span>
-            <span><strong>Term:</strong> 2, 2026</span>
-        </div>
-        <p style="font-size: 0.9em; margin-top: 10px; color: #cbd5e0;">Instructor: Dr. Salah Zogheib | Evaluator: Dr. Jalal Abu Ghali</p>
-    </header>
+<header>
+    <h1>Fahad Mohammed Al Zaid</h1>
+    <p>IE200 E-Portfolio | King Abdulaziz University | Term 2, 2026</p>
+    <p>ID: 2537996 | Instructor: Dr. Salah Zogheib | Evaluator: Dr. Jalal Abu Ghali</p>
+</header>
 
-    <nav>
-        <button class="tab-link active" onclick="openTab(event, 'Welcome')">Home</button>
-        <button class="tab-link" onclick="openTab(event, 'Diary')">Diary Logs</button>
-        <button class="tab-link" onclick="openTab(event, 'Tier1')">Tier 1 (Speaking & Writing)</button>
-        <button class="tab-link" onclick="openTab(event, 'Tier2')">Tier 2 (Research)</button>
-    </nav>
+<div class="nav-bar">
+    <button class="tab-btn active" onclick="showTab('home')">Home</button>
+    <button class="tab-btn" onclick="showTab('diary')">Weekly Diaries</button>
+    <button class="tab-btn" onclick="showTab('tier1')">Tier 1: Writing</button>
+    <button class="tab-btn" onclick="showTab('tier2')">Tier 2: Research</button>
+</div>
 
-    <div class="container">
-        <!-- Welcome Page -->
-        <div id="Welcome" class="tab-content active">
-            <h2>Welcome to My IE200 E-Portfolio</h2>
-            <p>Hello, and welcome! My name is <strong>Fahad Mohammed Al Zaid</strong>, an engineering student at King Abdulaziz University. This e-portfolio showcases my progress in the IE200 course, divided into two core modules: "Speaking & Writing" and "Research".</p>
-            <p>A major highlight of this portfolio is my research project titled: <em>"Overconfidence from Superficial Knowledge: A Study of Cognitive and Behavioral Effect"</em>. Each artifact here represents a stepping stone in developing my academic skills.</p>
-        </div>
-
-        <!-- Weekly Diary Logs -->
-        <div id="Diary" class="tab-content">
-            <h2>My Weekly Diary Logs</h2>
-            <p>Consistent reflection is key to academic growth. Below is my weekly documentation:</p>
-            <div class="placeholder-box">
-                📍 ضع هنا رابط قوقل دوكس أو ملف الوورد الخاص بمذكراتك الأسبوعية (Diary Logs)
-            </div>
-        </div>
-
-        <!-- Tier One -->
-        <div id="Tier1" class="tab-content">
-            <h2>Tier One: Speaking & Writing</h2>
-            
-            <div class="exhibit">
-                <h3>1. Presentation Slides</h3>
-                <div class="placeholder-box">📍 ضع هنا لقطة شاشة (Screenshot) لشرائح عرض البوربوينت الخاصة بك</div>
-                <div class="evaluation"><strong>Evaluation:</strong> These slides demonstrate the development of my presentation skills. Utilizing a professional, symbolic design helped me communicate complex concepts effectively to my audience.</div>
-            </div>
-
-            <div class="exhibit">
-                <h3>2. Class Notes & Drafts</h3>
-                <div class="placeholder-box">📍 ضع هنا صوراً لملاحظاتك المكتوبة بخط اليد أو مسوداتك الأولى</div>
-                <div class="evaluation"><strong>Evaluation:</strong> This exhibit showcases my initial brainstorming and outlining process, highlighting the transition from raw ideas to structured academic writing.</div>
-            </div>
-
-            <div class="exhibit">
-                <h3>3. Instructor Feedback & E-Rubrics</h3>
-                <div class="placeholder-box">📍 ضع هنا صورة أو لقطة شاشة لتقييم وتعليقات الدكتور صلاح أو الدكتور جلال</div>
-                <div class="evaluation"><strong>Evaluation:</strong> Reviewing this feedback from my instructors was crucial to identifying my weak points and refining my final drafts and delivery techniques.</div>
-            </div>
-        </div>
-
-        <!-- Tier Two -->
-        <div id="Tier2" class="tab-content">
-            <h2>Tier Two: Research Exhibits</h2>
-            
-            <div class="exhibit">
-                <h3>1. Research Proposal</h3>
-                <div class="placeholder-box">📍 ضع هنا ملف الـ PDF أو صورة للمقترح البحثي الأول (Research Proposal)</div>
-                <div class="evaluation"><strong>Evaluation:</strong> This document is the foundation of my project, showing how I initially framed the problem regarding superficial knowledge and set the study's scope.</div>
-            </div>
-
-            <div class="exhibit">
-                <h3>2. Data Collection Tool</h3>
-                <div class="placeholder-box">📍 ضع هنا رابط قوقل فورم (Google Forms) الخاص بالاستبيان المكون من 15 سؤال</div>
-                <div class="evaluation"><strong>Evaluation:</strong> Designing this 15-question electronic survey was a major milestone. It allowed me to gather quantitative data from 51 participants, teaching me how to construct unbiased Likert-scale questions.</div>
-            </div>
-
-            <div class="exhibit">
-                <h3>3. Final Research Report</h3>
-                <h4>Title: Overconfidence from Superficial Knowledge</h4>
-                <div class="placeholder-box">📍 ضع هنا ملف الوورد أو الـ PDF للبحث النهائي الذي قمنا بإعداده</div>
-                <div class="evaluation"><strong>Evaluation:</strong> This is the culmination of my effort this semester, representing my ability to synthesize literature, analyze data, and format an academic paper to university standards.</div>
-            </div>
-        </div>
+<div class="content">
+    <div id="home" class="tab-pane active">
+        <h2>Welcome to My E-Portfolio</h2>
+        <p>Hello! I am Fahad Mohammed Al Zaid. This portfolio serves as a comprehensive record of my academic journey in IE200, covering my research on: <strong>"Overconfidence from Superficial Knowledge: A Study of Cognitive and Behavioral Effect."</strong></p>
     </div>
 
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; tabcontent[i].classList.remove("active"); }
-            tablinks = document.getElementsByClassName("tab-link");
-            for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
-            document.getElementById(tabName).style.display = "block";
-            setTimeout(() => { document.getElementById(tabName).classList.add("active"); }, 10);
-            evt.currentTarget.className += " active";
-        }
-    </script>
-</body>
-</html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fahad's IE200 E-Portfolio</title>
-    <style>
-        :root {
-            --primary-color: #1a365d;
-            --secondary-color: #2b6cb0;
-            --accent-color: #38b2ac;
-            --bg-color: #f7fafc;
-            --text-color: #2d3748;
-        }
-        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
-        header { background-color: var(--primary-color); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--accent-color); }
-        header h1 { margin: 0; font-size: 2.8em; }
-        .header-details { background: rgba(255,255,255,0.1); display: inline-flex; padding: 10px 20px; border-radius: 50px; gap: 20px; margin-top: 15px; }
-        nav { display: flex; justify-content: center; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; }
-        nav button { background: none; border: none; padding: 18px 30px; color: var(--primary-color); font-size: 1.1em; font-weight: bold; cursor: pointer; border-bottom: 3px solid transparent; }
-        nav button.active { color: var(--secondary-color); border-bottom: 3px solid var(--accent-color); background-color: #ebf8ff; }
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        .tab-content { display: none; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .tab-content.active { display: block; }
-        h2 { color: var(--primary-color); border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-        .exhibit { margin-top: 30px; padding: 25px; background-color: #f8fafc; border-left: 5px solid var(--secondary-color); border-radius: 0 8px 8px 0; }
-        .placeholder-box { background-color: #fff3cd; border: 2px dashed #ffeeba; padding: 30px; text-align: center; color: #856404; font-weight: bold; font-size: 1.1em; border-radius: 8px; margin: 15px 0; }
-        .evaluation { font-style: italic; color: #4a5568; background: #edf2f7; padding: 15px; border-radius: 6px; margin-top: 15px; border: 1px solid #e2e8f0; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Fahad Mohammed Al Zaid</h1>
-        <p>King Abdulaziz University | IE200 E-Portfolio</p>
-        <div class="header-details">
-            <span><strong>ID:</strong> 2537996</span>
-            <span><strong>Group:</strong> 10</span>
-            <span><strong>Term:</strong> 2, 2026</span>
-        </div>
-        <p style="font-size: 0.9em; margin-top: 10px; color: #cbd5e0;">Instructor: Dr. Salah Zogheib | Evaluator: Dr. Jalal Abu Ghali</p>
-    </header>
-
-    <nav>
-        <button class="tab-link active" onclick="openTab(event, 'Welcome')">Home</button>
-        <button class="tab-link" onclick="openTab(event, 'Diary')">Diary Logs</button>
-        <button class="tab-link" onclick="openTab(event, 'Tier1')">Tier 1 (Speaking & Writing)</button>
-        <button class="tab-link" onclick="openTab(event, 'Tier2')">Tier 2 (Research)</button>
-    </nav>
-
-    <div class="container">
-        <!-- Welcome Page -->
-        <div id="Welcome" class="tab-content active">
-            <h2>Welcome to My IE200 E-Portfolio</h2>
-            <p>Hello, and welcome! My name is <strong>Fahad Mohammed Al Zaid</strong>, an engineering student at King Abdulaziz University. This e-portfolio showcases my progress in the IE200 course, divided into two core modules: "Speaking & Writing" and "Research".</p>
-            <p>A major highlight of this portfolio is my research project titled: <em>"Overconfidence from Superficial Knowledge: A Study of Cognitive and Behavioral Effect"</em>. Each artifact here represents a stepping stone in developing my academic skills.</p>
-        </div>
-
-        <!-- Weekly Diary Logs -->
-        <div id="Diary" class="tab-content">
-            <h2>My Weekly Diary Logs</h2>
-            <p>Consistent reflection is key to academic growth. Below is my weekly documentation:</p>
-            <div class="placeholder-box">
-                📍 ضع هنا رابط قوقل دوكس أو ملف الوورد الخاص بمذكراتك الأسبوعية (Diary Logs)
-            </div>
-        </div>
-
-        <!-- Tier One -->
-        <div id="Tier1" class="tab-content">
-            <h2>Tier One: Speaking & Writing</h2>
-            
-            <div class="exhibit">
-                <h3>1. Presentation Slides</h3>
-                <div class="placeholder-box">📍 ضع هنا لقطة شاشة (Screenshot) لشرائح عرض البوربوينت الخاصة بك</div>
-                <div class="evaluation"><strong>Evaluation:</strong> These slides demonstrate the development of my presentation skills. Utilizing a professional, symbolic design helped me communicate complex concepts effectively to my audience.</div>
-            </div>
-
-            <div class="exhibit">
-                <h3>2. Class Notes & Drafts</h3>
-                <div class="placeholder-box">📍 ضع هنا صوراً لملاحظاتك المكتوبة بخط اليد أو مسوداتك الأولى</div>
-                <div class="evaluation"><strong>Evaluation:</strong> This exhibit showcases my initial brainstorming and outlining process, highlighting the transition from raw ideas to structured academic writing.</div>
-            </div>
-
-            <div class="exhibit">
-                <h3>3. Instructor Feedback & E-Rubrics</h3>
-                <div class="placeholder-box">📍 ضع هنا صورة أو لقطة شاشة لتقييم وتعليقات الدكتور صلاح أو الدكتور جلال</div>
-                <div class="evaluation"><strong>Evaluation:</strong> Reviewing this feedback from my instructors was crucial to identifying my weak points and refining my final drafts and delivery techniques.</div>
-            </div>
-        </div>
-
-        <!-- Tier Two -->
-        <div id="Tier2" class="tab-content">
-            <h2>Tier Two: Research Exhibits</h2>
-            
-            <div class="exhibit">
-                <h3>1. Research Proposal</h3>
-                <div class="placeholder-box">📍 ضع هنا ملف الـ PDF أو صورة للمقترح البحثي الأول (Research Proposal)</div>
-                <div class="evaluation"><strong>Evaluation:</strong> This document is the foundation of my project, showing how I initially framed the problem regarding superficial knowledge and set the study's scope.</div>
-            </div>
-
-            <div class="exhibit">
-                <h3>2. Data Collection Tool</h3>
-                <div class="placeholder-box">📍 ضع هنا رابط قوقل فورم (Google Forms) الخاص بالاستبيان المكون من 15 سؤال</div>
-                <div class="evaluation"><strong>Evaluation:</strong> Designing this 15-question electronic survey was a major milestone. It allowed me to gather quantitative data from 51 participants, teaching me how to construct unbiased Likert-scale questions.</div>
-            </div>
-
-            <div class="exhibit">
-                <h3>3. Final Research Report</h3>
-                <h4>Title: Overconfidence from Superficial Knowledge</h4>
-                <div class="placeholder-box">📍 ضع هنا ملف الوورد أو الـ PDF للبحث النهائي الذي قمنا بإعداده</div>
-                <div class="evaluation"><strong>Evaluation:</strong> This is the culmination of my effort this semester, representing my ability to synthesize literature, analyze data, and format an academic paper to university standards.</div>
-            </div>
-        </div>
+    <div id="diary" class="tab-pane">
+        <h2>Weekly Diary Logs</h2>
+        <div class="guide-box">📍 ضع هنا رابط ملف مذكراتك الأسبوعية (Diary Logs)</div>
     </div>
 
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; tabcontent[i].classList.remove("active"); }
-            tablinks = document.getElementsByClassName("tab-link");
-            for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
-            document.getElementById(tabName).style.display = "block";
-            setTimeout(() => { document.getElementById(tabName).classList.add("active"); }, 10);
-            evt.currentTarget.className += " active";
-        }
-    </script>
+    <div id="tier1" class="tab-pane">
+        <h2>Tier 1: Speaking & Writing</h2>
+        <h3>1. Presentation Slides</h3>
+        <div class="guide-box">📍 ضع هنا لقطة شاشة لعرض البوربوينت (تأكد من التصميم الرمزي)</div>
+        <div class="eval-box">Evaluation: These slides demonstrate the development of my presentation skills. Utilizing a professional, symbolic design helped me communicate complex concepts effectively.</div>
+        
+        <h3>2. Class Notes</h3>
+        <div class="guide-box">📍 ضع هنا صوراً لملاحظاتك المكتوبة بخط اليد</div>
+        <div class="eval-box">Evaluation: This exhibit showcases my initial brainstorming and outlining process, highlighting the transition to structured academic writing.</div>
+    </div>
+
+    <div id="tier2" class="tab-pane">
+        <h2>Tier 2: Research Exhibits</h2>
+        <h3>1. Research Proposal</h3>
+        <div class="guide-box">📍 ضع هنا ملف الـ PDF لمقترح البحث (Proposal)</div>
+        <div class="eval-box">Evaluation: This document shows how I framed the problem regarding superficial knowledge and set the study scope.</div>
+
+        <h3>2. Data Collection Tool</h3>
+        <div class="guide-box">📍 ضع هنا رابط قوقل فورم للاستبيان (15 سؤال)</div>
+        <div class="eval-box">Evaluation: Designing this survey allowed me to gather quantitative data from 51 participants, teaching me how to construct unbiased Likert-scale questions.</div>
+
+        <h3>3. Final Research Report</h3>
+        <div class="guide-box">📍 ضع هنا ملف الـ PDF للبحث النهائي (Overconfidence from Superficial Knowledge)</div>
+        <div class="eval-box">Evaluation: This report represents my ability to synthesize literature, analyze data, and format an academic paper to university standards.</div>
+    </div>
+</div>
+
+<script>
+    function showTab(id) {
+        document.querySelectorAll('.tab-pane').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
 </body>
 </html>
