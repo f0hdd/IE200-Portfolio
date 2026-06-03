@@ -1,72 +1,74 @@
 <!DOCTYPE html>
-<html lang="ar" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <title>Fahad Al Zaid | IE200 Professional E-Portfolio</title>
+    <title>Fahad Al Zaid | IE200 E-Portfolio</title>
     <style>
         :root { --main-blue: #0f172a; --accent-teal: #0d9488; --bg-gray: #f8fafc; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background-color: var(--bg-gray); color: #334155; }
-        header { background: linear-gradient(135deg, var(--main-blue), #1e293b); color: white; padding: 50px 20px; text-align: center; }
-        .nav-bar { background: white; padding: 15px; display: flex; justify-content: center; gap: 10px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 10; }
-        button { padding: 12px 25px; cursor: pointer; border: none; border-radius: 6px; font-weight: 600; background: #e2e8f0; transition: 0.3s; }
+        header { background: linear-gradient(135deg, var(--main-blue), #1e293b); color: white; padding: 40px 20px; text-align: center; }
+        .nav-bar { background: white; padding: 15px; display: flex; justify-content: center; gap: 10px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); position: sticky; top: 0; }
+        button { padding: 12px 20px; cursor: pointer; border: none; border-radius: 6px; font-weight: 600; background: #e2e8f0; }
         button.active { background: var(--accent-teal); color: white; }
         .content { max-width: 900px; margin: 30px auto; padding: 20px; }
-        .tab-pane { display: none; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .tab-pane { display: none; background: white; padding: 40px; border-radius: 12px; }
         .tab-pane.active { display: block; }
-        .guide-box { background: #fffbeb; border: 2px dashed #d97706; padding: 20px; text-align: center; color: #92400e; border-radius: 8px; margin: 20px 0; font-weight: bold; }
-        .eval-box { background: #f1f5f9; padding: 15px; border-left: 4px solid var(--accent-teal); margin-top: 10px; font-style: italic; }
+        .link-btn { display: block; background: var(--accent-teal); color: white; padding: 12px; text-align: center; text-decoration: none; border-radius: 6px; margin: 10px 0; font-weight: bold; }
+        .eval-box { background: #f1f5f9; padding: 20px; border-left: 5px solid var(--accent-teal); margin-bottom: 30px; }
+        h3 { color: var(--main-blue); margin-top: 30px; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Fahad Mohammed Al Zaid</h1>
-    <p>IE200 E-Portfolio | King Abdulaziz University | Term 2, 2026</p>
-    <p>ID: 2537996 | Instructor: Dr. Salah Zogheib | Evaluator: Dr. Jalal Abu Ghali</p>
+    <p>IE200 | King Abdulaziz University | 2026</p>
 </header>
 
 <div class="nav-bar">
     <button class="tab-btn active" onclick="showTab('home')">Home</button>
-    <button class="tab-btn" onclick="showTab('diary')">Weekly Diaries</button>
-    <button class="tab-btn" onclick="showTab('tier1')">Tier 1: Writing</button>
-    <button class="tab-btn" onclick="showTab('tier2')">Tier 2: Research</button>
+    <button class="tab-btn" onclick="showTab('diaries')">Weekly Journals</button>
+    <button class="tab-btn" onclick="showTab('writing')">Writing & Speaking</button>
+    <button class="tab-btn" onclick="showTab('research')">Research Details</button>
 </div>
 
 <div class="content">
     <div id="home" class="tab-pane active">
         <h2>Welcome to My E-Portfolio</h2>
-        <p>Hello! I am Fahad Mohammed Al Zaid. This portfolio serves as a comprehensive record of my academic journey in IE200, covering my research on: <strong>"Overconfidence from Superficial Knowledge: A Study of Cognitive and Behavioral Effect."</strong></p>
+        <p>This portfolio documents my academic journey in IE200, showcasing my growth in research, technical communication, and analytical thinking.</p>
     </div>
 
-    <div id="diary" class="tab-pane">
-        <h2>Weekly Diary Logs</h2>
-        <div class="guide-box">📍 ضع هنا رابط ملف مذكراتك الأسبوعية (Diary Logs)</div>
+    <div id="diaries" class="tab-pane">
+        <h2>Weekly Journals</h2>
+        <p>Consistent reflection is vital for academic growth. These journals document my weekly progress and challenges.</p>
+        <a href="#" class="link-btn">🔗 Access Weekly Journals</a>
+        <div class="eval-box"><strong>Reflection:</strong> This journal serves as a record of my learning process, highlighting how I managed academic challenges and refined my study habits throughout the semester.</div>
     </div>
 
-    <div id="tier1" class="tab-pane">
-        <h2>Tier 1: Speaking & Writing</h2>
-        <h3>1. Presentation Slides</h3>
-        <div class="guide-box">📍 ضع هنا لقطة شاشة لعرض البوربوينت (تأكد من التصميم الرمزي)</div>
-        <div class="eval-box">Evaluation: These slides demonstrate the development of my presentation skills. Utilizing a professional, symbolic design helped me communicate complex concepts effectively.</div>
+    <div id="writing" class="tab-pane">
+        <h2>Writing & Speaking</h2>
+        <p>This section showcases my development in professional communication and presentation skills.</p>
+        <h3>Presentations</h3>
+        <a href="https://docs.google.com/presentation/d/12pxoXJp8WPZCgNCm5Q6DhvOD-BwsXn5E/edit" class="link-btn">Presentation 1</a>
+        <a href="https://docs.google.com/presentation/d/1VEwsAqcn69wIeDZ3DdMC1yfIp9D39U8q/edit" class="link-btn">Presentation 2</a>
+        <div class="eval-box"><strong>Evaluation:</strong> These presentations emphasize clear, symbolic design over complex imagery, ensuring that engineering concepts are communicated effectively and professionally.</div>
         
-        <h3>2. Class Notes</h3>
-        <div class="guide-box">📍 ضع هنا صوراً لملاحظاتك المكتوبة بخط اليد</div>
-        <div class="eval-box">Evaluation: This exhibit showcases my initial brainstorming and outlining process, highlighting the transition to structured academic writing.</div>
+        <h3>Evaluator Feedback</h3>
+        <a href="https://drive.google.com/file/d/1OA_Mbr5Dx2FpPSvQckJ8Q723Q-8TanGO/view" class="link-btn">Feedback 1</a>
+        <a href="https://drive.google.com/file/d/1xtbO8CjDVZsPIlalcK8d5pful1aJ-PTg/view" class="link-btn">Feedback 2</a>
+        <div class="eval-box"><strong>Evaluation:</strong> Instructor feedback was fundamental in refining my writing style. Each critique allowed me to bridge the gap between initial drafts and final academic standards.</div>
     </div>
 
-    <div id="tier2" class="tab-pane">
-        <h2>Tier 2: Research Exhibits</h2>
-        <h3>1. Research Proposal</h3>
-        <div class="guide-box">📍 ضع هنا ملف الـ PDF لمقترح البحث (Proposal)</div>
-        <div class="eval-box">Evaluation: This document shows how I framed the problem regarding superficial knowledge and set the study scope.</div>
-
-        <h3>2. Data Collection Tool</h3>
-        <div class="guide-box">📍 ضع هنا رابط قوقل فورم للاستبيان (15 سؤال)</div>
-        <div class="eval-box">Evaluation: Designing this survey allowed me to gather quantitative data from 51 participants, teaching me how to construct unbiased Likert-scale questions.</div>
-
-        <h3>3. Final Research Report</h3>
-        <div class="guide-box">📍 ضع هنا ملف الـ PDF للبحث النهائي (Overconfidence from Superficial Knowledge)</div>
-        <div class="eval-box">Evaluation: This report represents my ability to synthesize literature, analyze data, and format an academic paper to university standards.</div>
+    <div id="research" class="tab-pane">
+        <h2>Research Details</h2>
+        <p><strong>Title:</strong> Overconfidence from Superficial Knowledge: A Study of Cognitive and Behavioral Effect.</p>
+        <a href="https://drive.google.com/file/d/1pMQdTIx14V4UwPmjcGRZKjSD0egW_fZf/view" class="link-btn">View Final Research Report</a>
+        
+        <h3>Methodology</h3>
+        <div class="eval-box"><strong>Process:</strong> I conducted a 15-question survey with 51 participants to analyze how superficial content influences self-confidence. This taught me how to structure valid, unbiased survey questions and manage data effectively.</div>
+        
+        <h3>Findings</h3>
+        <div class="eval-box"><strong>Conclusion:</strong> My study indicates that active learning strategies are essential to counteracting the effects of superficial knowledge. This research demonstrates my capability to synthesize complex information into an academic report.</div>
     </div>
 </div>
 
