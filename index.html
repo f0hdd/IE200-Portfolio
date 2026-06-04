@@ -2,74 +2,157 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fahad Mohammed Al Zaid | IE200 Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahad Al Zaid | IE200 E-Portfolio</title>
     <style>
-        * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; min-height: 100vh; background: #f0f2f5; }
-        .sidebar { width: 280px; background: #1a1a1a; color: white; padding: 40px 30px; position: fixed; height: 100%; }
-        .sidebar h2 { font-size: 1.5em; border-bottom: 2px solid #333; padding-bottom: 15px; margin-bottom: 30px; }
-        .nav-link { color: #bbb; text-decoration: none; display: block; padding: 15px 0; border-bottom: 1px solid #333; font-weight: 500; transition: 0.3s; }
-        .nav-link:hover { color: #00d4ff; padding-left: 10px; }
-        .main { margin-left: 280px; padding: 60px; width: calc(100% - 280px); }
-        .hero { background: #1a1a1a; color: white; padding: 80px; text-align: center; border-radius: 12px; margin-bottom: 40px; }
-        .section { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 40px; }
-        .eval-box { background: #f8f9fa; padding: 25px; border-left: 6px solid #00d4ff; margin-top: 20px; font-style: italic; color: #444; line-height: 1.8; }
-        .btn { display: inline-block; background: #00d4ff; color: #000; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 15px; margin-right: 10px; transition: 0.3s; }
-        .btn:hover { background: #0099bb; }
-        h3 { color: #1a1a1a; margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        :root { 
+            --main-blue: #0f172a; 
+            --accent-teal: #0d9488; 
+            --bg-gray: #f8fafc; 
+            --text-dark: #334155;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--bg-gray); color: var(--text-dark); line-height: 1.7; }
+        header { background: linear-gradient(135deg, var(--main-blue), #1e293b); color: white; padding: 50px 20px; text-align: center; border-bottom: 5px solid var(--accent-teal); }
+        header h1 { margin: 0; font-size: 2.8em; letter-spacing: 1px; }
+        .header-details { background: rgba(255,255,255,0.1); display: inline-flex; flex-wrap: wrap; justify-content: center; padding: 12px 25px; border-radius: 12px; gap: 20px; margin-top: 20px; font-size: 1.05em; }
+        .contact-info { margin-top: 15px; color: #cbd5e1; font-size: 0.95em; }
+        nav { background: white; padding: 10px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        button { padding: 12px 25px; cursor: pointer; border: none; border-radius: 6px; font-weight: 600; font-size: 1em; background: #e2e8f0; color: var(--main-blue); transition: all 0.3s ease; }
+        button:hover { background: #cbd5e1; }
+        button.active { background: var(--accent-teal); color: white; }
+        .content { max-width: 950px; margin: 40px auto; padding: 0 20px; }
+        .tab-pane { display: none; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); animation: fadeIn 0.4s; }
+        .tab-pane.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        h2 { color: var(--main-blue); border-bottom: 3px solid #e2e8f0; padding-bottom: 10px; margin-top: 0; }
+        .task-card { border: 1px solid #e2e8f0; padding: 25px; margin-bottom: 30px; border-radius: 10px; background: #fafafa; border-left: 5px solid var(--accent-teal); }
+        .task-card h3 { margin-top: 0; color: var(--main-blue); }
+        .abstract-box { background-color: #f8fafc; border: 1px solid #cbd5e1; padding: 20px; border-radius: 8px; margin-top: 20px; font-style: italic; border-left: 4px solid var(--main-blue); }
+        .eval-box { background: #f1f5f9; padding: 15px; border-radius: 6px; margin-top: 15px; border: 1px solid #e2e8f0; color: #475569; }
+        .guide-box { background: #fffbeb; border: 2px dashed #f59e0b; padding: 15px; text-align: center; color: #b45309; margin: 15px 0; font-weight: bold; border-radius: 6px; }
+        .grade-box { background: #ecfdf5; border: 1px solid #10b981; padding: 12px; border-radius: 6px; color: #047857; font-weight: bold; margin-top: 15px; display: flex; align-items: center; gap: 10px; }
     </style>
 </head>
 <body>
 
-<div class="sidebar">
-    <h2>Fahad Al Zaid</h2>
-    <a href="#home" class="nav-link">Home Page</a>
-    <a href="#research" class="nav-link">Research Journey</a>
-    <a href="#speaking" class="nav-link">Speaking & Writing</a>
-    <a href="#diaries" class="nav-link">Weekly Diaries</a>
+<header>
+    <h1>Fahad Mohammed Al Zaid</h1>
+    <p>IE200 Professional E-Portfolio | King Abdulaziz University</p>
+    
+    <div class="header-details">
+        <span><strong>ID:</strong> 2537996</span>
+        <span><strong>Group:</strong> 10</span>
+        <span><strong>Term:</strong> 2, 2026</span>
+    </div>
+    
+    <div class="header-details" style="background: transparent; border: 1px solid rgba(255,255,255,0.2);">
+        <span><strong>Instructor:</strong> Dr. Salah Zogheib</span>
+        <span><strong>Evaluator:</strong> Dr. Jalal Abu Ghali</span>
+    </div>
+
+    <div class="contact-info">
+        📧 Email: falzaid0003@stu.kau.edu.sa &nbsp;|&nbsp; 📱 Phone: 0544821618
+    </div>
+</header>
+
+<nav>
+    <button class="tab-btn active" onclick="showTab('home')">Home & About</button>
+    <button class="tab-btn" onclick="showTab('diary')">Weekly Journals</button>
+    <button class="tab-btn" onclick="showTab('tier1')">Tier 1: Writing & Speaking</button>
+    <button class="tab-btn" onclick="showTab('tier2')">Tier 2: Research</button>
+</nav>
+
+<div class="content">
+    
+    <!-- Home & About Page -->
+    <div id="home" class="tab-pane active">
+        <h2>About Me</h2>
+        <p>Hello, and welcome! My name is <strong>Fahad Mohammed Al Zaid</strong>, a 20-year-old engineering student at King Abdulaziz University. I believe that engineering is not just about solving technical problems, but about cultivating discipline, consistency, and continuous growth.</p>
+        
+        <p>This mindset extends far beyond the classroom into my daily life. Whether I am dedicating time to intense calisthenics training to maintain strict physical discipline, or exploring the profound linguistic brilliance of classical Arabic literature—such as the poetry of Al-Mutanabbi and the works of Ibn al-Qayyim—I strive for excellence in all my endeavors. Looking to the future, I am working diligently to build a solid academic foundation here at KAU, with the ultimate goal of pursuing a Master's degree in engineering at King Fahd University of Petroleum and Minerals (KFUPM).</p>
+        
+        <p>This e-portfolio is a curated collection of my work throughout the IE200 course. Navigating through the main menu, you will find exhibits detailing my academic progress, divided into two core modules: <strong>Speaking & Writing</strong>, and <strong>Research</strong>.</p>
+        
+        <div class="abstract-box">
+            <h3 style="margin-top: 0; color: var(--main-blue); font-style: normal;">Research Abstract Snippet</h3>
+            <p>"A common problem today is that short videos and social media make students feel overconfident about their knowledge. The main goal of this study is to see how superficial knowledge from short articles and videos affects students' confidence and their decision to stop learning. Data were collected through an online survey with 15 questions completed by 51 participants, mostly university students..."</p>
+        </div>
+    </div>
+
+    <!-- Weekly Journals (Diaries) -->
+    <div id="diary" class="tab-pane">
+        <h2>Weekly Journals & Reflections</h2>
+        <p>Consistent reflection is the cornerstone of academic growth. Below is my weekly journal documentation, where I continuously recorded my learning process, analyzed the challenges I faced, and highlighted the specific skills I acquired week by week throughout the IE200 course.</p>
+        
+        <div class="task-card">
+            <h3>Weekly Journals Document</h3>
+            <div class="guide-box">📍 [INSERT YOUR GOOGLE DOCS OR WORD FILE LINK FOR YOUR WEEKLY JOURNALS HERE]</div>
+            <div class="grade-box">🎯 Grade/Score: [INSERT YOUR JOURNAL GRADE HERE]</div>
+        </div>
+    </div>
+
+    <!-- Tier 1 -->
+    <div id="tier1" class="tab-pane">
+        <h2>Tier One: Speaking & Writing Exhibits</h2>
+        <p>Effective communication is a core skill for any successful engineer. This section includes exhibits that demonstrate my progress in structuring ideas and presenting them clearly.</p>
+
+        <div class="task-card">
+            <h3>Exhibit 1: Presentation Slides</h3>
+            <div class="guide-box">📍 [INSERT A SCREENSHOT OR LINK TO YOUR POWERPOINT SLIDES HERE]</div>
+            <div class="eval-box"><strong>My Evaluation:</strong> These slides demonstrate the development of my presentation skills. Organizing my thoughts into clear, engaging visual aids—while strictly avoiding distracting human imagery in favor of a highly professional, symbolic design—helped me communicate complex concepts effectively to my audience.</div>
+            <div class="grade-box">🎯 Grade/Score: [INSERT PRESENTATION GRADE HERE]</div>
+        </div>
+
+        <div class="task-card">
+            <h3>Exhibit 2: Class Notes & Drafts</h3>
+            <div class="guide-box">📍 [INSERT PHOTOS OF YOUR HANDWRITTEN NOTES OR EARLY DRAFTS HERE]</div>
+            <div class="eval-box"><strong>My Evaluation:</strong> This exhibit showcases my initial brainstorming and outlining process. Including these early handwritten and electronic drafts highlights my transition from raw, scattered ideas to structured academic writing.</div>
+            <div class="grade-box">🎯 Grade/Score: [INSERT NOTES/DRAFTS EVALUATION HERE]</div>
+        </div>
+
+        <div class="task-card">
+            <h3>Exhibit 3: Instructor Feedback & E-Rubrics</h3>
+            <div class="guide-box">📍 [INSERT SCREENSHOT OF DR. SALAH OR DR. JALAL'S FEEDBACK HERE]</div>
+            <div class="eval-box"><strong>My Evaluation:</strong> Reviewing this constructive feedback was crucial to my academic development. It allowed me to accurately identify my weak points in writing and presenting, helping me refine my final drafts and improve my future delivery techniques.</div>
+        </div>
+    </div>
+
+    <!-- Tier 2 -->
+    <div id="tier2" class="tab-pane">
+        <h2>Tier Two: Research Exhibits</h2>
+        <p>This section showcases the practical effort of my main research project: <strong>Overconfidence from Superficial Knowledge: A Study of Cognitive and Behavioral Effect.</strong></p>
+
+        <div class="task-card">
+            <h3>Exhibit 1: Research Proposal</h3>
+            <div class="guide-box">📍 [INSERT LINK OR PDF OF YOUR RESEARCH PROPOSAL HERE]</div>
+            <div class="eval-box"><strong>My Evaluation:</strong> This document serves as the absolute foundation of my project. It demonstrates how I initially framed my research problem regarding digital superficial knowledge and effectively set the scope for the entire study before diving into data collection.</div>
+            <div class="grade-box">🎯 Grade/Score: [INSERT PROPOSAL GRADE HERE]</div>
+        </div>
+
+        <div class="task-card">
+            <h3>Exhibit 2: Data Collection Tool (Electronic Questionnaire)</h3>
+            <div class="guide-box">📍 [INSERT GOOGLE FORMS LINK HERE]</div>
+            <div class="eval-box"><strong>My Evaluation:</strong> Designing this survey was a major practical learning milestone. It allowed me to successfully gather quantitative data from 51 participants using a carefully constructed 15-item questionnaire, teaching me how to build unbiased, Likert-scale questions to measure cognitive behaviors accurately.</div>
+            <div class="grade-box">🎯 Grade/Score: [INSERT SURVEY EVALUATION HERE]</div>
+        </div>
+
+        <div class="task-card">
+            <h3>Exhibit 3: The Final IE200 Research Report</h3>
+            <div class="guide-box">📍 [INSERT THE FINAL WORD/PDF FILE OF YOUR RESEARCH HERE]</div>
+            <div class="eval-box"><strong>My Evaluation:</strong> This is the culmination of my effort this semester. The final report represents my ability to synthesize complex literature, analyze primary data, and format an academic paper precisely to university standards. It is the piece of work I am most proud of.</div>
+            <div class="grade-box">🎯 Grade/Score: [INSERT FINAL RESEARCH GRADE HERE]</div>
+        </div>
+    </div>
+
 </div>
 
-<div class="main">
-    <div id="home" class="hero">
-        <h1>My IE200 Portfolio</h1>
-        <p>King Abdulaziz University | Term 2, 2026</p>
-    </div>
-
-    <div id="research" class="section">
-        <h2>Research Journey</h2>
-        <p><strong>Topic:</strong> Overconfidence from Superficial Knowledge: A Study of Cognitive and Behavioral Effect.</p>
-        <a href="https://docs.google.com/document/d/1OA_Mbr5Dx2FpPSvQckJ8Q723Q-8TanGO/edit" class="btn">View Full Research Report</a>
-        <h3>Methodology & Findings</h3>
-        <div class="eval-box">
-            The research utilized a 15-item survey administered to 51 participants. Findings indicate that active learning strategies are vital to mitigate the cognitive biases associated with superficial knowledge.
-        </div>
-    </div>
-
-    <div id="speaking" class="section">
-        <h2>Speaking & Writing Tasks</h2>
-        <h3>Presentation Exhibits</h3>
-        <a href="https://docs.google.com/presentation/d/12pxoXJp8WPZCgNCm5Q6DhvOD-BwsXn5E/edit" class="btn">Presentation 1</a>
-        <a href="https://docs.google.com/presentation/d/1VEwsAqcn69wIeDZ3DdMC1yfIp9D39U8q/edit" class="btn">Presentation 2</a>
-        
-        <h3>Instructor Feedback</h3>
-        <!-- الرابط المصحح للتقييم الأول -->
-        <a href="https://drive.google.com/file/d/1pMQdTIx14V4UwPmjcGRZKjSD0egW_fZf/view" class="btn">Feedback 1</a>
-        <!-- الرابط الثاني للتقييم الثاني -->
-        <a href="https://drive.google.com/file/d/1xtbO8CjDVZsPIlalcK8d5pful1aJ-PTg/view" class="btn">Feedback 2</a>
-        
-        <div class="eval-box">
-            The instructor feedback above documents the iterative improvement of my presentation skills. These evaluations were critical in refining my delivery and symbolic design approach, ensuring academic professionalism.
-        </div>
-    </div>
-
-    <div id="diaries" class="section">
-        <h2>Weekly Diaries</h2>
-        <a href="#" class="btn">View Weekly Documentation</a>
-        <div class="eval-box">
-            These weekly journals provide a transparent view of my academic challenges and the problem-solving strategies I implemented throughout the IE200 semester.
-        </div>
-    </div>
-</div>
-
+<script>
+    function showTab(id) {
+        document.querySelectorAll('.tab-pane').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
 </body>
 </html>
